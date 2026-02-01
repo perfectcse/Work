@@ -1,54 +1,55 @@
-Startup Benefits Platform – Full Stack Assignment
+# Work
+A full-stack web application that allows startups to browse, claim, and track startup benefits.
+Built using Next.js (App Router) on the frontend and Node.js + Express + MongoDB on the backend with JWT authentication.
 
-A full-stack application that allows startups to explore SaaS deals, claim eligible benefits, and track claim status.
+📌 Features
+🔐 Authentication
+User Registration
+User Login
+JWT-based authentication
+Protected dashboard routes
 
-Tech Stack
+🏷️ Startup Deals
+View all available startup deals
+View single deal details
+Locked & unlocked deals support
+Eligibility information per deal
+
+🧾 Claims System
+
+Authenticated users can claim deals
+
+Claim status tracking (pending, approved)
+
+User dashboard shows claimed deals
+
+Duplicate claims prevented
+
+📊 Dashboard
+
+Protected dashboard (login required)
+
+Displays claimed deals
+
+Shows claim status clearly
+
+🧱 Tech Stack
 Frontend
-Next.js (App Router)
+Next.js 16 (App Router)
+React
 TypeScript
 Tailwind CSS
 Framer Motion
-................
 Backend
 Node.js
 Express.js
-MongoDB (Mongoose)
+MongoDB + Mongoose
 JWT Authentication
-...................
-Core Application Flow
-User registers or logs in
-User browses available deals
-Locked deals require authentication
-User claims a deal
-Claimed deals appear in dashboard with status tracking
-...................................................
-Frontend Implementation
-Landing Page (animated hero + CTA)
-Deals Listing Page (search, filter, locked/unlocked)
-Deal Details Page
-User Dashboard (protected)
-Login & Register pages
-..............................
-UI & Animation
-Page transitions
-Hover and micro-interactions
-Loading and empty states
-Smooth layout transitions
-.....................
-Backend Implementation
-Core Entities
-User
-Deal
-Claim
-........................
-API Responsibilities
-User registration & login
-Fetch all deals
-Fetch single deal
-Claim a deal (JWT protected)
-Fetch claimed deals for a user
-..................
-Security
-JWT-based authentication
-Protected routes using middleware
-Locked deals cannot be claimed without authentication
+bcrypt (password hashing)
+
+🔐 Authentication Flow
+User registers / logs in
+Backend returns JWT token
+Token stored in localStorage
+Token sent via Authorization: Bearer <token>
+Protected routes validated via middleware
